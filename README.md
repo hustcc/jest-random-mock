@@ -13,7 +13,7 @@
 This should only be installed as a development dependency (`devDependencies`) as it is only designed for testing.
 
 ```bash
-npm i --save-dev jest-random-mock
+$ npm i --save-dev jest-random-mock
 ```
 
 ## Usage
@@ -24,13 +24,13 @@ npm i --save-dev jest-random-mock
  - `clear()`: shut down the mock system, use original Math.random.
 
 ```js
-import { mock, clear } from 'jest-random-mock';
+import { mock, clear } from "jest-random-mock";
 
 beforeEach(() => {
   mock();
 });
 
-test('your test cases', () => {
+test("your test cases", () => {
   mock();
   const r1 = Math.random();
   clear();
@@ -39,7 +39,7 @@ test('your test cases', () => {
   const r2 = Math.random();
   clear();
 
-  // expect r1 will same woth r2.
+  // expect r1 should be same with r2.
 });
 
 afterEach(() => {
@@ -53,15 +53,15 @@ afterEach(() => {
 ![image](https://github.com/hustcc/jest-random-mock/assets/7856674/a2601adf-984c-4ecc-aa8f-d247a2ab6141)
 
 ```ts
-import { Chart } from '@antv/g2';
-import { createDeterministicRandom } from 'jest-random-mock';
+import { Chart } from "@antv/g2";
+import { createDeterministicRandom } from "jest-random-mock";
 
 const random = createDeterministicRandom();
 
 const chart = new Chart({
-  container: 'container',
+  container: "container",
   autoFit: true,
-  theme: 'academy',
+  theme: "academy",
 });
 
 const flex = chart
