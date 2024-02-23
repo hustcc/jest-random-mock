@@ -1,0 +1,41 @@
+{
+  "name": "jest-random-mock",
+  "version": "1.0.0",
+  "description": "Mock `Math.random` when run unit test cases with jest, output deterministic random number.",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "keywords": [
+    "mock",
+    "jest",
+    "jest-random-mock",
+    "random"
+  ],
+  "scripts": {
+    "test": "jest --no-cache",
+    "build": "babel src --out-dir lib --copy-files && npm run test"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hustcc/jest-random-mock.git"
+  },
+  "author": "hustcc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hustcc/jest-random-mock/issues"
+  },
+  "homepage": "https://github.com/hustcc/jest-random-mock#readme"
+}
