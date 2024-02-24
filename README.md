@@ -3,7 +3,7 @@
 > Mock `Math.random` when run unit test cases with jest, output deterministic random number.
 
 [![Build Status](https://github.com/hustcc/jest-random-mock/workflows/build/badge.svg)](https://github.com/hustcc/jest-random-mock/actions)
-[![Coverage Status](https://coveralls.io/repos/github/hustcc/jest-random-mock/badge.svg?branch=master)](https://coveralls.io/github/hustcc/jest-random-mock)
+[![Coverage Status](https://coveralls.io/repos/github/hustcc/jest-random-mock/badge.svg?branch=main)](https://coveralls.io/github/hustcc/jest-random-mock)
 [![npm](https://img.shields.io/npm/v/jest-random-mock.svg)](https://www.npmjs.com/package/jest-random-mock)
 [![npm](https://img.shields.io/npm/dm/jest-random-mock.svg)](https://www.npmjs.com/package/jest-random-mock)
 
@@ -21,7 +21,10 @@ $ npm i --save-dev jest-random-mock
 > Use the only `3 api` for test cases.
 
  - `mock()`: Mocks the Math.random, with deterministic random function.
- - `clear()`: shut down the mock system, use original Math.random.
+ - `clear()`: Shut down the mock system, use original Math.random.
+ - `createDeterministicRandom()`: Return a deterministic random number generator.
+
+Use it in jest env.
 
 ```js
 import { mock, clear } from "jest-random-mock";
@@ -45,6 +48,17 @@ test("your test cases", () => {
 afterEach(() => {
   clear();
 });
+```
+
+Use it as a library.
+
+```ts
+import { createDeterministicRandom } from "jest-random-mock";
+
+const random = createDeterministicRandom();
+
+const v1 = random();
+const v2 = random();
 ```
 
 

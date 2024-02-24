@@ -9,6 +9,6 @@ export declare function mock(): () => {};
 export declare function clear(): void;
 
 /**
- * Return a deterministic random number generator
+ * Return a deterministic random number generator.
  */
 export declare function createDeterministicRandom(): () => number;

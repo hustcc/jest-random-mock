@@ -21,5 +21,8 @@ describe('jest-random-mock', () => {
 
     expect(r1).toEqual(r2);
     expect(r1.every(v => v >= 0 && v < 1)).toBe(true);
+
+    // Test that the mock is cleared.
+    expect(Math.random()).not.toBe(Math.random());
   })
 });
